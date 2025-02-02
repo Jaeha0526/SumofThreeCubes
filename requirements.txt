@@ -5,3 +5,6 @@ einops
 jaxtyping
 tqdm
 IPython
+ipykernerl
+scikit-learn
+requests
