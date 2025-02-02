@@ -10,10 +10,10 @@ from PPO import (
 from environments.env1 import SumofCubesEnv
 from environments.env2 import SumofCubesEnv2
 from environments.env3 import SumofCubesEnv3
-# from environments.env4 import SumofCubesEnv4
-# from environments.env5 import SumofCubesEnv5
-# from environments.env6 import SumofCubesEnv6
-# from environments.env7 import SumofCubesEnv7
+from environments.env4 import SumofCubesEnv4
+from environments.env5 import SumofCubesEnv5
+from environments.env6 import SumofCubesEnv6
+from environments.env7 import SumofCubesEnv7
 from environments.env8 import SumofCubesEnv8
 
 
