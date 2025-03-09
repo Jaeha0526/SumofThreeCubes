@@ -15,6 +15,9 @@ pip install -r requirements.txt
 1. Configure the experiment using PPOArgs
 2. Select your target environment
 3. Start the training process
+```bash
+python run.py
+```
 
 ## Configuration Parameters
 
