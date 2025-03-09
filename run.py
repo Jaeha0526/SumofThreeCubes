@@ -15,6 +15,7 @@ from environments.env5 import SumofCubesEnv5
 from environments.env6 import SumofCubesEnv6
 from environments.env7 import SumofCubesEnv7
 from environments.env8 import SumofCubesEnv8
+from environments.env9 import SumofCubesEnv9
 
 
 
@@ -50,14 +51,17 @@ if __name__ == '__main__':
         num_envs = 8,
         num_steps = 128,
         target_k = 1,
-        max_k = 50000,
+        max_k = 1000000,
         gamma = 0.99,
         ent_coef=0.01,
-        plist = [37]
-                    )
+        plist = [37],
+        reward = [1000, 100, 1, 0.1, 0.1], 
+        depreciation=10,
+    )
 
-    trainer = PPOTrainer(args, SumofCubesEnv8)
+    trainer = PPOTrainer(args, SumofCubesEnv9)
     trainer.train()
-    
+    print(trainer.envs.good_solutions)
+    # print(trainer.envs.solutions)
     plot_rewards([trainer.last_episode_len_records[:]])
     

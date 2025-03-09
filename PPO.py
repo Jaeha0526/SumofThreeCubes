@@ -373,7 +373,7 @@ def calc_clipped_surrogate_objective(
     mb_logprobs: Float[Tensor, "minibatch_size"],
     clip_coef: float,
     eps: float = 1e-8
-) -> Float[Tensor, ""]:
+) :
     '''Return the clipped surrogate objective, suitable for maximisation with gradient ascent.
 
     probs:
@@ -406,7 +406,7 @@ def calc_value_function_loss(
     values: Float[Tensor, "minibatch_size"],
     mb_returns: Float[Tensor, "minibatch_size"],
     vf_coef: float
-) -> Float[Tensor, ""]:
+) :
     '''Compute the value function portion of the loss function.
 
     values:
@@ -540,7 +540,7 @@ class PPOTrainer:
             self.scheduler.step()
 
 
-    def compute_ppo_objective(self, minibatch: ReplayMinibatch) -> Float[Tensor, ""]:
+    def compute_ppo_objective(self, minibatch: ReplayMinibatch) :
         '''
         Handles learning phase for a single minibatch. Returns objective function to be maximized.
         '''
@@ -628,4 +628,5 @@ def plot_rewards(reward_records, average_only=False):
             plt.plot(reward_records[i])
         plt.plot(average_reward[i,:])
 
+    plt.show()
     return
